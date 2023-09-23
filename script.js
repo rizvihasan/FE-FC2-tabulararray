@@ -103,7 +103,6 @@ const table = document.getElementById('table');
 const tbody = document.getElementById('tbody');
 const serachBar = document.getElementById('search-bar');
 
-// -----------------------adding students into table-----------------------
 
 function addStudent(student){
     const tr = document.createElement('tr');
@@ -122,7 +121,6 @@ function addStudent(student){
     tbody.appendChild(tr);
 }
 
-//                 -------------------------------- search bar --------------------------
 
 function updateResult(query){
     tbody.innerHTML = '';
@@ -147,8 +145,6 @@ serachBar.addEventListener('input',()=>{
   })
 
 
-// Filter Buttons----------------
-
 let sortAtoZ = document.getElementById('btn-1');
 let sortZtoA = document.getElementById('btn-2');
 let MarksSort = document.getElementById('btn-3'); 
@@ -156,12 +152,10 @@ let sortPassing = document.getElementById('btn-4');
 let classSort = document.getElementById('btn-5');
 let genderSort = document.getElementById('btn-6');
 
-// default page elements
 let pageRender = arr.forEach((ele)=>{
     addStudent(ele);
 })
 
-// sort by A -- Z
  sortAtoZ.addEventListener('click',()=>{
     sortByName();
     tbody.innerHTML = '';
